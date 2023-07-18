@@ -1,0 +1,12 @@
+<!-- <div class="results">
+  <div class="result" *ngFor="let videoUrl of videoResults">
+    <img [src]="videoUrl" />
+  </div>
+  <div></div>
+</div> -->
+
+<cdk-virtual-scroll-viewport itemSize="50" class="results">
+  <div *cdkVirtualFor="let videoUrl of videoResults" class="result">
+    <img [src]="videoUrl" />
+  </div>
+</cdk-virtual-scroll-viewport>
